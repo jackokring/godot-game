@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://audio/explode.wav" type="AudioStream" id=2]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -108,3 +109,7 @@ margin_right = 453.0
 margin_bottom = 38.0
 text = "Escape/Start"
 align = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource( 2 )
