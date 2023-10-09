@@ -1,0 +1,106 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 237.838 ]
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 917.0
+margin_bottom = 493.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+margin_right = 910.0
+margin_bottom = 14.0
+text = "Confirm"
+align = 1
+
+[node name="Info" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 910.0
+margin_bottom = 32.0
+align = 1
+
+[node name="Text" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 910.0
+margin_bottom = 444.0
+grow_vertical = 2
+size_flags_vertical = 3
+text = "hello
+
+
+
+
+
+
+"
+
+[node name="ControlButtons" type="HBoxContainer" parent="Control/PanelContainer/VBoxContainer"]
+margin_top = 448.0
+margin_right = 910.0
+margin_bottom = 486.0
+grow_vertical = 2
+alignment = 1
+
+[node name="Ok" type="VBoxContainer" parent="Control/PanelContainer/VBoxContainer/ControlButtons"]
+margin_right = 453.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Ok"]
+margin_right = 453.0
+margin_bottom = 20.0
+text = "Ok"
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Ok"]
+margin_top = 24.0
+margin_right = 453.0
+margin_bottom = 38.0
+text = "Enter/Select"
+align = 1
+
+[node name="Cancel" type="VBoxContainer" parent="Control/PanelContainer/VBoxContainer/ControlButtons"]
+margin_left = 457.0
+margin_right = 910.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Cancel"]
+margin_right = 453.0
+margin_bottom = 20.0
+text = "Cancel"
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Cancel"]
+margin_top = 24.0
+margin_right = 453.0
+margin_bottom = 38.0
+text = "Escape/Start"
+align = 1
