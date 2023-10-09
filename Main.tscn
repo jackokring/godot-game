@@ -8,14 +8,21 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 237.838 ]
 }
 
-[node name="Control" type="Control" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="GUI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MarginContainer" type="Control" parent="GUI"]
 margin_right = 1024.0
 margin_bottom = 600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
+[node name="DialogOk" type="PanelContainer" parent="GUI/MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 50.0
@@ -28,7 +35,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer"]
+[node name="Details" type="VBoxContainer" parent="GUI/MarginContainer/DialogOk"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 917.0
@@ -36,19 +43,19 @@ margin_bottom = 493.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="GUI/MarginContainer/DialogOk/Details"]
 margin_right = 910.0
 margin_bottom = 14.0
 text = "Confirm"
 align = 1
 
-[node name="Info" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+[node name="Info" type="Label" parent="GUI/MarginContainer/DialogOk/Details"]
 margin_top = 18.0
 margin_right = 910.0
 margin_bottom = 32.0
 align = 1
 
-[node name="Text" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="GUI/MarginContainer/DialogOk/Details"]
 margin_top = 36.0
 margin_right = 910.0
 margin_bottom = 444.0
@@ -63,42 +70,42 @@ text = "hello
 
 "
 
-[node name="ControlButtons" type="HBoxContainer" parent="Control/PanelContainer/VBoxContainer"]
+[node name="ControlButtons" type="HBoxContainer" parent="GUI/MarginContainer/DialogOk/Details"]
 margin_top = 448.0
 margin_right = 910.0
 margin_bottom = 486.0
 grow_vertical = 2
 alignment = 1
 
-[node name="Ok" type="VBoxContainer" parent="Control/PanelContainer/VBoxContainer/ControlButtons"]
+[node name="Ok" type="VBoxContainer" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons"]
 margin_right = 453.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Ok"]
+[node name="Button" type="Button" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons/Ok"]
 margin_right = 453.0
 margin_bottom = 20.0
 text = "Ok"
 
-[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Ok"]
+[node name="Label" type="Label" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons/Ok"]
 margin_top = 24.0
 margin_right = 453.0
 margin_bottom = 38.0
 text = "Enter/Select"
 align = 1
 
-[node name="Cancel" type="VBoxContainer" parent="Control/PanelContainer/VBoxContainer/ControlButtons"]
+[node name="Cancel" type="VBoxContainer" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons"]
 margin_left = 457.0
 margin_right = 910.0
 margin_bottom = 38.0
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Cancel"]
+[node name="Button" type="Button" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons/Cancel"]
 margin_right = 453.0
 margin_bottom = 20.0
 text = "Cancel"
 
-[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/ControlButtons/Cancel"]
+[node name="Label" type="Label" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons/Cancel"]
 margin_top = 24.0
 margin_right = 453.0
 margin_bottom = 38.0
