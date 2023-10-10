@@ -89,7 +89,7 @@ text = "Ok"
 margin_top = 24.0
 margin_right = 453.0
 margin_bottom = 38.0
-text = "Enter/Select"
+text = "Enter/Select/L2"
 align = 1
 
 [node name="Cancel" type="VBoxContainer" parent="GUI/MarginContainer/DialogOk/Details/ControlButtons"]
@@ -107,7 +107,7 @@ text = "Cancel"
 margin_top = 24.0
 margin_right = 453.0
 margin_bottom = 38.0
-text = "Escape/Start"
+text = "Escape/Start/R2"
 align = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
