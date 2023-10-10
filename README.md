@@ -9,6 +9,14 @@ It might not be much and it might get better. Check `exports` for binaries when 
  * The rest is for WASM web browsing.
  
 Performance may vary. Ironically, `Game.arm64` is not available but runs using the `.deb`
-installed on thev development system.
+installed on the development system.
 
-If you import the project, some directories might nrrd fixing.
+If you import the project, some directories might need fixing.
+
+## Gameplay
+
+## Implementation
+
+ [X] Output size and view
+ [ ] Keyboard, mouse and input
+ [ ] ...
