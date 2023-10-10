@@ -29,8 +29,9 @@ and `ui_page_down` use L2 and R2, as they are limited to complex controllers.
 
 ## Implementation
 
-- [X] Output size and view
+- [X] Output size and view, MarginContainer - Custom Constants
 - [X] Keyboard, mouse and input
 - [X] Translate test
+- [X] Font resources and theme hierarchy
 - [ ] ...
  

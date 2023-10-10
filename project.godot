@@ -32,10 +32,6 @@ window/stretch/mode="viewport"
 
 window=false
 
-[gui]
-
-theme/custom="res://game_theme.tres"
-
 [input]
 
 ui_accept={
