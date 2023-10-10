@@ -20,10 +20,6 @@ run/main_scene="res://Main.tscn"
 boot_splash/image="res://gfx/logo.png"
 config/icon="res://icon.png"
 
-[autoload]
-
-Main="*res://Main.tscn"
-
 [display]
 
 window/stretch/mode="viewport"
