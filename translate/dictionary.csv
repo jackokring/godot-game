@@ -1,1 +1,9 @@
 keys,en
+CANCEL,"Cancel (Right Button, Escape)"
+OK,"OK (Down/Up Button, Enter)"
+SELECT,"Select (Up/Left Button, Space)"
+ESCAPE,"Escape (Left/Down Button, Backslash)"
+HOME,"Home (L Button/Mouse, Home)"
+END,"End (R Button/Mouse, End)"
+PAGE_UP,"Page Up (L2 Button, Page Up)"
+PAGE_DOWN,"Page Down (R2 Button, Page Down)"
