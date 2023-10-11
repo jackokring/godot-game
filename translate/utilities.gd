@@ -9,7 +9,10 @@ static func format(fmt: String, apply: Dictionary = {}) -> String:
 	apply[""] = "????"
 	var split = fmt.split("{")
 	for i in split:
-		var key = i.split("}")[0]
+		var key = i.split("}")
+		if key.size() < 2:
+			continue
+		key = key[0]
 		if apply[key] == null:
 			apply[key] = TranslationServer.tr(key)
 		if apply[key] is int:

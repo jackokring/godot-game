@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Label",
+"class": "TLabel",
+"language": "GDScript",
+"path": "res://translate/TLabel.gd"
+}, {
 "base": "Node",
 "class": "Util",
 "language": "GDScript",
 "path": "res://translate/utilities.gd"
 } ]
 _global_script_class_icons={
+"TLabel": "",
 "Util": ""
 }
 
