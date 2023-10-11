@@ -87,5 +87,11 @@ margin_right = 1010.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "CANCEL"
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 2.0
+one_shot = true
 [connection signal="pressed" from="Details/ControlButtons/Ok" to="." method="_on_pause_popup_ok_pressed"]
 [connection signal="pressed" from="Details/ControlButtons/Cancel" to="." method="_on_pause_popup_cancel_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_long_pause"]
