@@ -1,12 +1,19 @@
 class_name TLabel
 extends Label
 
-var defaults := {}
+var translations := {} setget setTranslations, getTranslations
+var _save: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set("text", Util.format(get("text"), defaults))
+	_save = get("text")
+	set("text", Util.format(get("text"), translations))
 
 func getTranslations() -> Dictionary:
-	return defaults
+	return translations
 
+func setTranslations(trans: Dictionary) -> void:
+	translations = trans
+	# make ready for ready
+	set("text", _save)
+	_ready()
