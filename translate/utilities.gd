@@ -1,6 +1,17 @@
 class_name Util
 extends Node
 ## Translation and string utilities.
+## Well actually a nice place for all utilities as
+## this directory is likely to be in all projects
+## as it makes for easy configuration.
+
+## A 2D to 3D recast
+static func vec23(vec: Vector2) -> Vector3:
+	return Vector3(vec.x, 0, -vec.y)
+
+## A 3D to 2D downcast
+static func vec32(vec: Vector3) -> Vector2:
+	return Vector2(vec.x, -vec.z)
 
 ## Applies a translation dictionary for {KEY} inclusions.
 ## A dictionary of overrides to apply can be supplied.

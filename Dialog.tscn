@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/source-code-pro/SourceCodeProBig.tres" type="DynamicFont" id=1]
 [ext_resource path="res://fonts/source-code-pro/SourceCodeProBlack.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Dialog.gd" type="Script" id=3]
 [ext_resource path="res://TLabel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://audio/explode.wav" type="AudioStream" id=5]
 
 [node name="Dialog" type="PanelContainer"]
 pause_mode = 2
@@ -79,6 +80,10 @@ text = "CANCEL"
 process_mode = 0
 wait_time = 2.0
 one_shot = true
+
+[node name="Explode" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+mix_target = 2
 [connection signal="pressed" from="Details/ControlButtons/Ok" to="." method="_on_pause_popup_ok_pressed"]
 [connection signal="pressed" from="Details/ControlButtons/Cancel" to="." method="_on_pause_popup_cancel_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_long_pause"]

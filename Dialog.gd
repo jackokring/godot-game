@@ -2,6 +2,7 @@ extends PanelContainer
 
 signal ok
 onready var exit_timer := $Timer
+onready var intro := $Explode
 
 func _ready():
 	# default to shown
@@ -10,6 +11,7 @@ func _ready():
 func _on_pause_button_pressed():
 	get_tree().paused = true
 	show()
+	intro.play()
 
 func _on_pause_popup_cancel_pressed():
 	hide()
