@@ -22,10 +22,10 @@ them do the following, with some minor other things like L and R for `ui_home` a
 The mouse buttons also double as L and R, for android tapping. The two minor keys `ui_page_up`
 and `ui_page_down` use L2 and R2, as they are limited to complex controllers.
 
- * A - RED - `ui_cancel` - Xbox B - Nintendo A - Sony Circle - `Right Button` - `(Start/R3/Options)`: Primary pause and menu options key.
- * B - YELLOW - `ui_escape` - Xbox X - Nintendo Y - Sony Square - `Left Button (Down)`
- * X - BLUE - `ui_accept` - Xbox A - Nintendo B - Sony Cross - `Down Button (Up)` - `(Select/L3/Share)`: Primary confirm and "fire" key.
- * Y - GREEN - `ui_select` - Xbox Y - Nintendo X - Sony Triangle - `Up Button (Left)`
+ * A - RED - `ui_cancel` - Xbox B - Nintendo A - Sony Circle - `Right Button/Escape` - `(Start/R3/Options)`: Primary pause and menu options key.
+ * B - YELLOW - `ui_escape` - Xbox X - Nintendo Y - Sony Square - `Left Button (Down)/Backslash`
+ * X - BLUE - `ui_accept` - Xbox A - Nintendo B - Sony Cross - `Down Button (Up)/Enter` - `(Select/L3/Share)`: Primary confirm and "fire" key.
+ * Y - GREEN - `ui_select` - Xbox Y - Nintendo X - Sony Triangle - `Up Button (Left)/Space`
 
 ## Implementation
 
