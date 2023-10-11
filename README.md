@@ -23,9 +23,14 @@ The mouse buttons also double as L and R, for android tapping. The two minor key
 and `ui_page_down` use L2 and R2, as they are limited to complex controllers.
 
  * A - RED - `ui_cancel` - Xbox B - Nintendo A - Sony Circle - `Right Button/Escape` - `(Start/R3/Options)`: Primary pause and menu options key.
- * B - YELLOW - `ui_escape` - Xbox X - Nintendo Y - Sony Square - `Left Button (Down)/Backslash`
+ * B - YELLOW - `ui_escape` - Xbox X - Nintendo Y - Sony Square - `Left Button (Down)/Backslash` -> NORMAL
  * X - BLUE - `ui_accept` - Xbox A - Nintendo B - Sony Cross - `Down Button (Up)/Enter` - `(Select/L3/Share)`: Primary confirm and "fire" key.
- * Y - GREEN - `ui_select` - Xbox Y - Nintendo X - Sony Triangle - `Up Button (Left)/Space`
+ * Y - GREEN - `ui_select` - Xbox Y - Nintendo X - Sony Triangle - `Up Button (Left)/Space` -> STRANGE
+ 
+So this obviously makes `Down Button` change between the input formats as it is detected as the normal `Left Button` on my joypad, and remains
+the `Down Button` accept on many other joypads. As the alternate can be kept or set by `Up Button`. So both `Up` and `Down` set the mapping
+making `Left` actually toggle between the two control layouts.
+
 
 ## Implementation
 
