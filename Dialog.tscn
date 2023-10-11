@@ -3,7 +3,7 @@
 [ext_resource path="res://fonts/source-code-pro/SourceCodeProBig.tres" type="DynamicFont" id=1]
 [ext_resource path="res://fonts/source-code-pro/SourceCodeProBlack.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Dialog.gd" type="Script" id=3]
-[ext_resource path="res://translate/TLabel.gd" type="Script" id=4]
+[ext_resource path="res://Text.tscn" type="PackedScene" id=4]
 
 [node name="Dialog" type="PanelContainer"]
 pause_mode = 2
@@ -53,22 +53,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Text" type="Label" parent="Details/MarginContainer"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 990.0
-margin_bottom = 431.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "hello
-
-
-
-
-
-
-"
-script = ExtResource( 4 )
+[node name="Text" parent="Details/MarginContainer" instance=ExtResource( 4 )]
 
 [node name="ControlButtons" type="HBoxContainer" parent="Details"]
 margin_top = 566.0
