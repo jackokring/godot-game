@@ -5,8 +5,10 @@ signal ok
 onready var exit_timer := $Timer
 onready var intro := $Explode
 
-# my weird controller
+## My weird controller flag.
 var weird := 0
+
+## Used as arguments for some functions.
 enum Buttons {
 	CANCEL, # menu A
 	OK, # B
@@ -28,22 +30,29 @@ const _pattern = [
 	["ui_cancel", "ui_select", "ui_escape", "ui_accept", "ui_home", "ui_end"],
 ]
 
-func _on_pressed_left(weird_test: int):
-	if weird != weird_test:
+# An easter egg?
+func _on_pressed_left(weird_new: int):
+	if weird != weird_new:
 		# exit as not left button
-		return
-	# left button action in menu goes here
+		# and set mapping
+		weird = weird_new
+	else:
+		# left button action in menu goes here
+		pass
 
+## Checks with [enum Dialog.Buttons].
 func just_pressed(button: int) -> bool:
 	if button >= _pattern[weird].size():
 		return false
 	return Input.is_action_just_pressed(_pattern[weird][button])
 
+## Checks with [enum Dialog.Buttons].
 func pressed(button: int) -> bool:
 	if button >= _pattern[weird].size():
 		return false
 	return Input.is_action_pressed(_pattern[weird][button])
 
+## Checks with [enum Dialog.Buttons].
 func just_released(button: int) -> bool:
 	if button >= _pattern[weird].size():
 		return false
@@ -87,8 +96,6 @@ func _process(_delta):
 		if is_visible_in_tree():
 			_on_pause_popup_ok_pressed()
 	if just_pressed(Buttons.SELECT):
-		_on_pressed_left(weird)
-		weird = 1
+		_on_pressed_left(1)
 	if just_pressed(Buttons.ESCAPE):
-		_on_pressed_left(weird)
-		weird = 0
+		_on_pressed_left(0)
