@@ -4,33 +4,49 @@ extends PanelContainer
 signal ok
 onready var exit_timer := $Timer
 onready var intro := $Explode
+
+# my weird controller
 var weird := 0
 enum Buttons {
-	CANCEL,
-	ESCAPE,
-	ACCEPT,
-	SELECT,
+	CANCEL, # menu A
+	OK, # B
+	SELECT, # X
+	ESCAPE, # Y
+	HOME, # L1
+	END, # R1
+	PGUP,
+	PGDN,
 }
 
 # ABXY
 const _pattern = [
-	["ui_cancel", "ui_accept", "ui_select", "ui_escape"], # norm
-	["ui_cancel", "ui_escape", "ui_accept", "ui_select"], # weird
+	# normal over functional controllers
+	["ui_cancel", "ui_accept", "ui_select", "ui_escape", "ui_home", "ui_end",
+	 "ui_page_up", "ui_page_down"],
+	# just the basic buttons with even select/start remapped too
+	# this does alter the shortcut keys too
+	["ui_cancel", "ui_select", "ui_escape", "ui_accept", "ui_home", "ui_end"],
 ]
 
 func _on_pressed_left(weird_test: int):
 	if weird != weird_test:
 		# exit as not left button
 		return
-	# left button action goes here
+	# left button action in menu goes here
 
 func just_pressed(button: int) -> bool:
+	if button >= _pattern[weird].size():
+		return false
 	return Input.is_action_just_pressed(_pattern[weird][button])
 
 func pressed(button: int) -> bool:
+	if button >= _pattern[weird].size():
+		return false
 	return Input.is_action_pressed(_pattern[weird][button])
 
 func just_released(button: int) -> bool:
+	if button >= _pattern[weird].size():
+		return false
 	return Input.is_action_just_released(_pattern[weird][button])
 
 func _ready():
@@ -67,7 +83,7 @@ func _process(_delta):
 			_on_pause_button_pressed()
 	if just_released(Buttons.CANCEL):
 		exit_timer.stop()
-	if just_pressed(Buttons.ACCEPT):
+	if just_pressed(Buttons.OK):
 		if is_visible_in_tree():
 			_on_pause_popup_ok_pressed()
 	if just_pressed(Buttons.SELECT):

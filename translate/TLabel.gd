@@ -6,8 +6,9 @@ var _save: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# print(tr(get("text")))
 	_save = get("text")
-	set("text", Util.format(get("text"), translations))
+	set("text", Util.format(_save, translations))
 
 func getTranslations() -> Dictionary:
 	return translations
