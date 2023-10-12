@@ -24,7 +24,7 @@ static func format(fmt: String, apply: Dictionary = {}) -> String:
 		if key.size() < 2:
 			continue
 		key = key[0]
-		if apply[key] == null:
+		if not apply.has(key):
 			apply[key] = TranslationServer.tr(key)
 		if apply[key] is int:
 			apply[key] = plural(key, apply[key])

@@ -8,7 +8,7 @@ var _save: String
 func _ready():
 	# print(tr(get("text")))
 	_save = get("text")
-	set("text", Util.format(_save, translations))
+	set("text", Util.format(tr(_save), translations))
 
 func getTranslations() -> Dictionary:
 	return translations
