@@ -34,6 +34,10 @@ making `Left` actually toggle between the two control layouts.
 
 ## Implementation
 
+- [ ] Refactor code `ClassNames`/`instance_names` and decide if filenames are instances of the class class. Essential before code becomes to complex to easily refactor.
+- [ ] Add tab control to GUI. Fix movement links.
+- [ ] Decide on left button menu action fix handling by return of `bool`.
+- [ ] Add simple player sprite control.
 - [X] Output size and view, MarginContainer - Custom Constants
 - [X] Keyboard, mouse and input
 - [X] Translate test
